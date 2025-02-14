@@ -19,7 +19,7 @@ jobs:
         with:
           registry: quay.io
           username: alexandercalle+almworkshop
-          password: VNVUGRKQ3B9HMXTTV2JHMJ9Y2PTQPVZA74OL5XPUIGH4QOXX6N19KM97SV7KRFU3
+          password: ${{ secrets.QUAY_PASSWORD }}
 
       - name: Extract metadata (tags, labels) for Docker
         uses: docker/metadata-action@v4
