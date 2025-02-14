@@ -10,6 +10,7 @@ type Workshop struct {
 	Date         string   `json:"date"`
 	Presentator  string   `json:"presentator"`
 	Participants []string `json:"participants"`
+	SweaterScore int8     `json:"sweaterscore"`
 }
 
 var defaultSweaterScore, _ = strconv.ParseInt(os.Getenv("DEFAULT_SWEATERSCORE"), 10, 8)
@@ -19,7 +20,7 @@ var workshop = Workshop{
 	Date:         "14/02/2025",
 	Presentator:  "AE Consultants",
 	Participants: []string{"John Doe", "Mary Little Lamb", "Chuck Norris", "Alexander Callebaut"},
-	SweaterCore: 	int8(defaultSweaterScore),
+	SweaterScore: 	int8(defaultSweaterScore),
 }
 
 func getWorkshopHandler(w http.ResponseWriter, r *http.Request) {
