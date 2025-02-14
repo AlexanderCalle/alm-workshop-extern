@@ -10,7 +10,7 @@ env:
   OPENSHIFT_NAMESPACE: "alexandercalle-dev"
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/tst'
     environment: development
     runs-on: ubuntu-22.04
     steps:
