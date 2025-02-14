@@ -1,5 +1,5 @@
 name: Golang Docker Build
-
+# Push for every push
 on: push
 
 env:
